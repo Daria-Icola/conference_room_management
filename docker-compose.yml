@@ -1,0 +1,38 @@
+version: "3.8"
+
+
+services:
+  db:
+    image: postgres:12
+    container_name: dtb_postgres
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+    - TZ='GMT+3'
+    - PGTZ='GMT+3'
+    - POSTGRES_DB=postgres
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    env_file:
+      - ./.env
+    ports:
+      - "5433:5432"
+
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dtb_bot
+    restart: always
+    command: python run_polling.py
+    env_file:
+      - ./.env
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+
+
+volumes:
+  postgres_data:

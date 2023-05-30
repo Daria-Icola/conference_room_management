@@ -1,0 +1,32 @@
+main:
+  room_candinsky:
+    callback_data: "Кандинский"
+    name: 'Кандинский'
+
+  room_pimenov:
+    callback_data: "Пименов"
+    name: 'Пименов'
+
+  room_rodchenko:
+    callback_data: "Родченко 30"
+    name: 'Родченко 30'
+
+  room_popova:
+    callback_data: "Любовь Попова"
+    name: 'Любовь Попова'
+
+choosed_room:
+  choose_weekday:
+    callback_data: "CHOOSE_WEEKDAY"
+    name: 'К выбору времени'
+
+  see_active:
+    callback_data: "SEE_ACTIVE_BOOKING"
+    name: 'Посмотреть занятое время'
+
+  delete_booking:
+    callback_data: "DELETE_BOOKING"
+    name: 'Удалить бронирование'
+
+
+

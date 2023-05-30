@@ -1,0 +1,4 @@
+
+date_format: "%Y-%m-%d %H:%M"
+date_format_for_message: "%d.%m.%Y %H:%M"
+time_zone : "Europe/Moscow"
